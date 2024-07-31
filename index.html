@@ -15,8 +15,113 @@
 
 <body>
   <main>
-    <section>
-      <form action="">aaaa</form>
+    <section class="container">
+      <header>
+        <a href="#">
+          <img src="assets/icons/arrow-left-02.svg" alt=""> Voltar
+        </a>
+        <h2>Formulário de matrícula</h2>
+        <p>Preencha os dados abaixo para matricular seu filho na escola de educação infantil Estrelas do Amanhã.</p>
+      </header>
+      <div>
+        <h4>Informações da criança</h4>
+        <form action="GET">
+          <label for="complet-name">
+            Nome completo
+            <input type="text" name="complet-name" id="complet-name">
+          </label>
+          <label for="birth-date">
+            Data de nascimento
+            <input type="date" name="birth-date" id="birth-date">
+          </label>
+          <label for="gender">
+            Sexo
+            <select name="gender" id="gender">
+              <option value="Feminino">Feminino</option>
+              <option value="Masculino">Masculino</option>
+            </select>
+          </label>
+          <label for="med-info">
+            Informações médicas
+            <textarea name="med-info" id="med-info"></textarea>
+          </label>
+          <label for="born-certify">
+            Certidão de nascimento
+            <input type="file" name="born-certify" id="born-certify">
+          </label>
+        </form>
+      </div>
+      <div>
+        <h4>Endereço residencial</h4>
+        <form action="GET">
+          <label for="cep">
+            CEP
+            <input type="number" name="cep" id="cep">
+          </label>
+          <label for="street">
+            Rua
+            <input type="text" name="street" id="street">
+          </label>
+          <label for="number">
+            Número
+            <input type="number" name="number" id="number">
+          </label>
+          <label for="city">
+            Cidade
+            <input type="text" name="city" id="city">
+          </label>
+          <label for="state">
+            Estado
+            <input type="text" name="state" id="state">
+          </label>
+        </form>
+      </div>
+      <div>
+        <h4>Informações do responsável</h4>
+        <form action="GET">
+          <label for="responsible-name">
+            Nome do responsavel
+            <input type="number" name="responsible-name" id="responsible-name">
+          </label>
+          <label for="tell">
+            Telefone
+            <input type="number" name="tell" id="tell">
+          </label>
+          <label for="email">
+            E-mail
+            <input type="email" name="email" id="email">
+          </label>
+        </form>
+      </div>
+      <div>
+        <h4>Opções de matrícula</h4>
+        <fieldset>
+          <legend>Selecione o turno de estudo</legend>
+          <label for="morning">Manhã</label>
+          <input type="radio" name="shift" id="morning" value="morning">
+          <label for="afternoon">Tarde </label>
+          <input type="radio" name="shift" id="afternoon" value="afternoon">
+        </fieldset>
+        <fieldset>
+          <legend>Em qual esporte você gostaria de inscrever seu filho?</legend>
+          <label for="morning">Futebol</label>
+          <input type="radio" name="shift" id="morning" value="morning">
+          <label for="afternoon">Basquete </label>
+          <input type="radio" name="shift" id="afternoon" value="afternoon">
+          <label for="morning">Natação</label>
+          <input type="radio" name="shift" id="morning" value="morning">
+          <label for="afternoon">Yoga </label>
+          <input type="radio" name="shift" id="afternoon" value="afternoon">
+          <label for="morning">Volley</label>
+          <input type="radio" name="shift" id="morning" value="morning">
+          <label for="afternoon">Boxe </label>
+          <input type="radio" name="shift" id="afternoon" value="afternoon">
+        </fieldset>
+      </div>
+      <div>
+        <input type="checkbox" name="condition" id="condition">
+        <p>Declaro que li e concordo com os <span>Termos e Condições</span> e com a <span>Política de Privacidade</span> da escola Estrela do Amanhã. </p>
+      </div>
     </section>
     <aside>
       <img src="assets/logo-estreda-do-amanhã.svg" alt="Logo Estrela do Amanhã">
