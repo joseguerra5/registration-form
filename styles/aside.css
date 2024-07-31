@@ -1,11 +1,12 @@
 aside {
   display: grid;
   grid-column: 2/3;
-  right: 0px;
+  right: 0;
   background-color: var(--surface-color-secondary);
   padding: 64px;
   position: fixed;
   height: 100%;
+  width: 50%;
   align-items: center;
 }
 
