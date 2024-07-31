@@ -31,15 +31,28 @@
   --pink-color: #F682A5;
   
   --font-family: "poppins", sans-serif;
+  --text-h1-bold: 700 40px/125% var(--font-family);
   --text-h1: 700 32px/120% var(--font-family);
   --text-h2: 700 24px/120% var(--font-family);
   --text-h3: 700 20px/120% var(--font-family);
   --text-h4: 700 16px/120% var(--font-family);
+  --text-regular: 400 16px/150% var(--font-family);
 }
 
 body{
   font: var(--font-family);
   color: var(--text-color-primary);
   background-color: var(--surface-color-primary);
+}
+
+.container{
+  display: grid;
+  padding-inline: 64px;
+  margin-inline: auto;
+  max-width: 1280px;
+}
+
+.highlight{
+  color: var(--text-color-highlight);
 }
 
