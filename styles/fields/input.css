@@ -1,0 +1,102 @@
+input, textarea, select {
+  appearance: none;
+  width: 100%;
+  border-radius: .5rem;
+
+  /* hack para não ficar movendo o template */
+  border: 2px solid transparent;
+  outline: 1px solid var(--strok-default);
+
+  padding: .75rem 1rem;
+
+  font: var(--font-family);
+}
+
+label {
+  font: var(--font-family);
+  color: var(--text-color-secondary);
+
+  display: block;
+  margin-bottom: .25rem;
+}
+
+input:focus, 
+textarea:hover,
+select:hover,
+input:hover,
+select:focus, 
+textarea:focus, 
+input[type="date"]:focus-within {
+  /* adicionar a sombra do focus */
+  outline: .25rem solid var(--surface-color-secondary);
+  border: .125rem solid var(--strok-highlight);
+  /* hack para aperecer a borda em todos os navegadores */
+  outline-offset: .1px;
+}
+
+input[type="date"] {
+  position: relative;
+  &::-webkit-calendar-picker-indicator{
+    /* esconde o calendário e deixa com todas as funções */
+    opacity: 0;
+  }
+  &::before{
+    /* Todo before precisa de um content */
+    content: "";
+    position: absolute;
+    background: url(../../assets/icons/calendar-03.svg) center/contain;
+    right: 1rem;
+    width: 1.25rem;
+    height: 1.25rem;
+
+    /* estratégia para alinhar qualquer coisa */
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+select {
+  /* calc(100% - 1rem) modo para jogar todo a direita e diminuir 1px */
+  background: url(../../assets/icons/arrow-down-01.svg) no-repeat calc(100% - 1rem);
+}
+
+.adress .flex {
+  gap: 1.25rem;
+}
+
+.input-wrapper:has([disabled]) {
+  opacity: .5;
+}
+
+input {
+  &[disabled] {
+    background-color: var(--surface-color-disabled);
+    border: 1px solid var(--strok-default);
+
+    color: var(--text-color-primary);
+  }
+
+  &:invalid {
+    border: 0.125rem solid var(--semantic-error);
+  }
+
+  & + small {
+    color: #78716C;
+    display: inline;
+    margin-top: .25rem;
+  }
+
+  &[required] + .error{
+    display: flex;
+    align-items: center;
+    gap: .25rem;
+
+    color: var(--semantic-error);
+
+    margin-top: .25rem;
+  }
+
+  &:not(:focus):valid + .error{
+    display: none;
+  }
+}

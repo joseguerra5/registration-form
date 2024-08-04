@@ -6,44 +6,55 @@
 }
 
 main {
-  overflow: auto; /* permite a rolagem no campo main */
+  overflow: auto;
+  /* permite a rolagem no campo main */
   padding: 4rem;
 
-  &.main-container {
+  & .main-container {
     max-width: 33rem;
     margin-left: auto;
   }
 
-  &.back {
+  & .back {
     display: flex;
     align-items: center;
     gap: .5rem;
     margin-bottom: 1.5rem;
   }
 
-  &.h1 {
+  & h1 {
     font: 600 1.5rem/1.25 var(--font-family);
     margin-bottom: .5rem;
   }
 }
 
-aside{
+aside {
+
   background-color: var(--surface-color-secondary);
   padding: 4rem;
 
+  & h2 {
+    font: 600 2.5rem/1.25 var(--font-family);
+    margin-bottom: .5rem;
 
-  &.aside-container {
+    & span {
+      color: var(--strok-highlight);
+    }
+  }
+
+  & .aside-container {
     max-width: 31rem;
 
-    & > img {
-      height: auto;
+    &>img {
+      margin-top: 2rem;
     }
   }
 
   & h1 {
     font: 600 2.5rem/1.25 var(--font-family);
     margin-bottom: .5rem;
-    & span{
+
+    & span {
       color: var(--strok-highlight);
     }
   }
